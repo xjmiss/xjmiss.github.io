@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>相忘于江湖的主页</title>
+  <title>线性表-链式存储-单链表Java实现 | 相忘于江湖的主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="相忘于江湖的主页">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="线性表的链式存储又可详细分为单链表、循环链表、双向循环链表，线性表的链式存储概念较简单，这里只记录一个java版本线性表链式存储的单链表实现，因为循环链表以及双向循环链表只是在其基础上有细微的差别。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性表-链式存储-单链表Java实现">
+<meta property="og:url" content="http://yoursite.com/2019/02/22/20190222-LinkedList/index.html">
 <meta property="og:site_name" content="相忘于江湖的主页">
+<meta property="og:description" content="线性表的链式存储又可详细分为单链表、循环链表、双向循环链表，线性表的链式存储概念较简单，这里只记录一个java版本线性表链式存储的单链表实现，因为循环链表以及双向循环链表只是在其基础上有细微的差别。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-23T06:18:26.646Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相忘于江湖的主页">
+<meta name="twitter:title" content="线性表-链式存储-单链表Java实现">
+<meta name="twitter:description" content="线性表的链式存储又可详细分为单链表、循环链表、双向循环链表，线性表的链式存储概念较简单，这里只记录一个java版本线性表链式存储的单链表实现，因为循环链表以及双向循环链表只是在其基础上有细微的差别。">
   
     <link rel="alternative" href="/atom.xml" title="相忘于江湖的主页" type="application/atom+xml">
   
@@ -134,81 +138,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-20190222-SeqList" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-20190222-LinkedList" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/22/20190222-SeqList/">线性表-顺序存储-Java实现</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/22/20190222-SeqList/" class="archive-article-date">
-  	<time datetime="2019-02-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>顺序存储是指在内存中分配一段连续空间，大部分语言使用数组表示，这里动手实现一个Java版本的线性表，顺序存储方式实现</p>
-        
-          <a class="article-more-a" href="/2019/02/22/20190222-SeqList/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/22/20190222-SeqList/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20190222-LinkedList" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/22/20190222-LinkedList/">线性表-链式存储-单链表Java实现</a>
+    <h1 class="article-title" itemprop="name">
+      线性表-链式存储-单链表Java实现
     </h1>
   
 
@@ -222,11 +159,31 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>线性表的链式存储又可详细分为单链表、循环链表、双向循环链表，线性表的链式存储概念较简单，这里只记录一个java版本线性表链式存储的单链表实现，因为循环链表以及双向循环链表只是在其基础上有细微的差别。</p>
-        
-          <a class="article-more-a" href="/2019/02/22/20190222-LinkedList/#more">more >></a>
-        
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 线性表之链式存储实现，单链表</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedSingleList</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 首节点</span></span><br><span class="line">    <span class="keyword">private</span> Node first;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 尾节点</span></span><br><span class="line">    <span class="keyword">private</span> Node last;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 节点数</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 添加节点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(T data)</span> </span>&#123;</span><br><span class="line">        Node n = <span class="keyword">new</span> Node(data);</span><br><span class="line">        <span class="keyword">if</span> (first == <span class="keyword">null</span>) &#123;</span><br><span class="line">            first = n;</span><br><span class="line">            last = first;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            last.next = n;</span><br><span class="line">            last = n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.size++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 插入节点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(T data, <span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size || size == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"out of index"</span>);</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">        Node prev = <span class="keyword">null</span>;</span><br><span class="line">        Node next = first;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (n == index) &#123;</span><br><span class="line">                Node node = <span class="keyword">new</span> Node(data, next);</span><br><span class="line">                <span class="keyword">if</span> (prev == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    first = node;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    prev.next = node;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">this</span>.size++;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            prev = next;</span><br><span class="line">            next = next.next;</span><br><span class="line">            n++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 删除节点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">remove</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index + <span class="number">1</span> &gt; size)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"out of index"</span>);</span><br><span class="line">        Node prev = <span class="keyword">null</span>;</span><br><span class="line">        Node next = first;</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (index == n) &#123;</span><br><span class="line">                <span class="keyword">if</span> (prev == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    first = next;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span> (next != <span class="keyword">null</span>)</span><br><span class="line">                        prev.next = next.next;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">this</span>.size--;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            prev = next;</span><br><span class="line">            next = next.next;</span><br><span class="line">            n++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取节点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">get</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ((index + <span class="number">1</span>) &gt; <span class="keyword">this</span>.size)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"out of index"</span>);</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">        Node current = first;</span><br><span class="line">        <span class="keyword">while</span> (current != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (index == n) &#123;</span><br><span class="line">                <span class="keyword">return</span> current.data;</span><br><span class="line">            &#125;</span><br><span class="line">            current = current.next;</span><br><span class="line">            n++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 清空表</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.size = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">this</span>.first = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">this</span>.last = <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 节点</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> T data;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 下一个节点的指针</span></span><br><span class="line">        <span class="keyword">private</span> Node next;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(T data, Node next)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.data = data;</span><br><span class="line">            <span class="keyword">this</span>.next = next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(T data)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.data = data;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> T <span class="title">getData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> data;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setData</span><span class="params">(T data)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.data = data;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Node <span class="title">getNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNext</span><span class="params">(Node next)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.next = next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        sb.append(<span class="string">"&#123;"</span>);</span><br><span class="line">        Node c = first;</span><br><span class="line">        <span class="keyword">boolean</span> empty = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (c != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (empty == <span class="keyword">false</span>)</span><br><span class="line">                sb.append(<span class="string">","</span>);</span><br><span class="line">            sb.append(c.getData());</span><br><span class="line">            empty = <span class="keyword">false</span>;</span><br><span class="line">            c = c.next;</span><br><span class="line">        &#125;</span><br><span class="line">        sb.append(<span class="string">"&#125;"</span>);</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -235,16 +192,79 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/22/20190222-LinkedList/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/22/20190222-LinkedList/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/02/22/20190222-SeqList/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          线性表-顺序存储-Java实现
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -264,8 +284,14 @@
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -288,8 +314,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
